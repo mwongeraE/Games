@@ -19,7 +19,7 @@ import android.widget.ListView;
 
 public class MainActivity extends Activity {
 
-    private List<rowitem> rowItems;
+    private List<RowItem> rowItems;
     private static Integer[] images = {
             R.drawable.red,
             R.drawable.red,
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#33b5e5" )));
 
         ListView lv = (ListView) findViewById(R.id.myList);
-        rowItems = new ArrayList<rowitem>();
+        rowItems = new ArrayList<RowItem>();
 
         String[] titles = {"Movie1","Movie2","Movie3","Movie4","Movie5","Movie6","Movie7","Movie8"};
         String[] descriptions = {"First Movie","Second movie","Third Movie","Fourth Movie","Fifth Movie",

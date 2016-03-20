@@ -1,5 +1,5 @@
-<linearlayout android:background="#e5e5e5" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout android:background="#e5e5e5" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <listview android:divider="@android:color/transparent" android:dividerheight="10dp" android:id="@+id/myList" android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent" android:paddingleft="10dip" android:paddingright="10dip" android:paddingtop="1dip">
+    <ListView android:divider="@android:color/transparent" android:dividerHeight="10dp" android:id="@+id/myList" android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent" android:paddingLeft="10dip" android:paddingRight="10dip" android:paddingTop="1dip">
 
-    </listview></linearlayout>
+    </ListView></LinearLayout>
