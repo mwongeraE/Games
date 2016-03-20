@@ -14,20 +14,12 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
  * Created by mwongera on 3/20/16.
  */
 public class MyIntro extends AppIntro {
-
+    @Override
     public void init(Bundle savedInstanceState) {
-        addSlide(AppIntroFragment.newInstance("Title here", "Description here...\nYeah, I've added this fragment programmatically",
-                R.drawable.ic_slide1, Color.parseColor("#2196F3")));
-
-        addSlide(AppIntroFragment.newInstance("HTML Description", Html.fromHtml("<b>Description bold...</b><br><i>Description italic...</i>"),
-                R.drawable.ic_slide1, Color.parseColor("#2196F3")));
-
-        setBarColor(Color.parseColor("#3F51B5"));
-        setSeparatorColor(Color.parseColor("#2196F3"));
-        showSkipButton(false);
-
-        setVibrate(true);
-        setVibrateIntensity(30);
+        addSlide(SampleSlide.newInstance(R.layout.intro));
+        addSlide(SampleSlide.newInstance(R.layout.intro2));
+        addSlide(SampleSlide.newInstance(R.layout.intro3));
+        addSlide(SampleSlide.newInstance(R.layout.intro4));
     }
 
     private void loadMainActivity(){
@@ -36,14 +28,14 @@ public class MyIntro extends AppIntro {
     }
 
     @Override
-    public void onSkipPressed() {
-        loadMainActivity();
-        Toast.makeText(getApplicationContext(), getString(R.string.skip), Toast.LENGTH_SHORT).show();
+    public void onNextPressed() {
     }
 
     @Override
-    public void onNextPressed() {
-
+    public void onSkipPressed() {
+        loadMainActivity();
+        Toast.makeText(getApplicationContext(),
+                getString(R.string.skip), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -53,7 +45,6 @@ public class MyIntro extends AppIntro {
 
     @Override
     public void onSlideChanged() {
-
     }
 
     public void getStarted(View v){
