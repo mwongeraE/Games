@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
     }
 
-    public void startMyIntro(View v) {
+    public void startDefaultIntro(View v) {
         Intent intent = new Intent(this, MyIntro.class);
         startActivity(intent);
 

@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.github.paolorotolo.appintro.AppIntro;
+import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
 /**
  * Created by mwongera on 3/20/16.
  */
-public class MyIntro extends AppIntro {
+public class MyIntro extends AppIntro2 {
     @Override
     public void init(Bundle savedInstanceState) {
         addSlide(SampleSlide.newInstance(R.layout.intro));
@@ -31,12 +32,12 @@ public class MyIntro extends AppIntro {
     public void onNextPressed() {
     }
 
-    @Override
+   /* @Override
     public void onSkipPressed() {
         loadMainActivity();
         Toast.makeText(getApplicationContext(),
                 getString(R.string.skip), Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     @Override
     public void onDonePressed() {
