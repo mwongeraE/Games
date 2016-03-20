@@ -60,4 +60,3 @@ public class MyIntro extends AppIntro {
         loadMainActivity();
     }
 }
-}
