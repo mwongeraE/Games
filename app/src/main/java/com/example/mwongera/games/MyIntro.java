@@ -14,13 +14,19 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
 /**
  * Created by mwongera on 3/20/16.
  */
-public class MyIntro extends AppIntro2 {
+public class MyIntro extends AppIntro {
     @Override
     public void init(Bundle savedInstanceState) {
         addSlide(SampleSlide.newInstance(R.layout.intro));
         addSlide(SampleSlide.newInstance(R.layout.intro2));
         addSlide(SampleSlide.newInstance(R.layout.intro3));
         addSlide(SampleSlide.newInstance(R.layout.intro4));
+    }
+
+    @Override
+    public void onSkipPressed() {
+        loadMainActivity();
+        Toast.makeText(getApplicationContext(),getString(R.string.skip),Toast.LENGTH_SHORT).show();
     }
 
     private void loadMainActivity(){

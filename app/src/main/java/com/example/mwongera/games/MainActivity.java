@@ -36,10 +36,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        // Intialize and set the Action Bar Background to Holo Blue
-        ActionBar actionBar = getActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#33b5e5" )));
-
         ListView lv = (ListView) findViewById(R.id.myList);
         rowItems = new ArrayList<RowItem>();
 
@@ -63,4 +59,5 @@ public class MainActivity extends Activity {
         startActivity(intent);
 
     }
+
 }
